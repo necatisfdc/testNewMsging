@@ -102,65 +102,40 @@
           </div>
         </div>
         <div class="chat-placeholder">
-    
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US';
-                embeddedservice_bootstrap.init(
-                    '00DWB000005v1J3',
-                    'Web_Chat',
-                    'https://firstunitedbank--agentforce.sandbox.my.site.com/ESWWebChat1764297947669',
-                    {
-                        scrt2URL: 'https://firstunitedbank--agentforce.sandbox.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
+<script type="text/javascript">
+    window._embeddedMessagingInitialized =
+        window._embeddedMessagingInitialized || false;
+
+    function initEmbeddedMessaging() {
+        if (window._embeddedMessagingInitialized) {
+            console.warn('Embedded Messaging already initialized. Skipping.');
+            return;
         }
-   <!-- </script>
-    <script type='text/javascript' src='https://firstunitedbank--agentforce.sandbox.my.site.com/ESWWebChat1764297947669/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-            <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+        window._embeddedMessagingInitialized = true;
 
-			embeddedservice_bootstrap.init(
-				'00Ddq000005ft8v',
-				'Web_Chat',
-				'https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105',
-				{
-					scrt2URL: 'https://firstunitedbank--fubfastqa.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US';
+
+            embeddedservice_bootstrap.init(
+                '00Ddq000005ft8v', // ONE org only
+                'Web_Chat',
+                'https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105',
+                {
+                    scrt2URL: 'https://firstunitedbank--fubfastqa.sandbox.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging:', err);
+        }
+    }
 </script>
-<script type='text/javascript' src='https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
 
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00Ddq000005ft8v',
-				'Web_Chat',
-				'https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105',
-				{
-					scrt2URL: 'https://firstunitedbank--fubfastqa.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+<script
+    type="text/javascript"
+    src="https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105/assets/js/bootstrap.min.js"
+    onload="initEmbeddedMessaging()">
 </script>
-<script type='text/javascript' src='https://firstunitedbank--fubfastqa.sandbox.my.site.com/ESWWebChat1766582128105/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
             
             </div>
